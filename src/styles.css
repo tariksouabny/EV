@@ -110,6 +110,10 @@ main .right {
     display: none;
  }
 
+ main .left h4 {
+    font-size: 20;
+ }
+
  
 }
 
