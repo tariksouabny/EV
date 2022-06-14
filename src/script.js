@@ -1,3 +1,7 @@
+function min(val1, val2) {
+    return Math.min(val1, val2)
+}
+
 $(document).ready(
     function() {
         $(".ev-download-link-1").hover(
@@ -12,7 +16,7 @@ $(document).ready(
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             $(".interior-of-car").css({
-              "transform": "scale(" + (1 + scroll/5000) + ")"
+              "transform": "scale(" + min(1 + scroll/5000, 1.045) + ")"
             })
         
           })
