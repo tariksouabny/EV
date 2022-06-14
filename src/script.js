@@ -21,6 +21,17 @@ $(document).ready(
         
           })
 
-        $('.hidden-text').fadeIn(500);
+        $('.hidden-text').fadeIn(1000);
+
+
+        $("h2").cooltext({
+               sequence:[
+                  {
+                     action:"animation",
+                     animation:["cool111"],
+                     stagger:150
+                  }
+               ]
+            });
     }
 )

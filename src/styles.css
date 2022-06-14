@@ -105,25 +105,13 @@ main .right {
     filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(30px -30px 0px #336EC8);
 }
 
-@media (max-width: 768px) {
- main .right {
-    display: none;
- }
-
- main .left h4 {
-    font-size: 20;
- }
-
- 
-}
-
 .hidden-text {
     display:none;
 }
 
 .section-2 {
     min-height: 100vh;
-    min-width: 100%;
+    min-width: 100vw;
     background: url("./media/track_background.png") no-repeat center;
     background-size: cover;
     display: flex;
@@ -141,21 +129,22 @@ main .right {
 .section-2 .description {
     background: black;
     color: white;
-    position: absolute;
     max-width: 30vw;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+position: absolute;
+margin-left: 62vw;
+margin-top: 20vw;
 
-    left: 52vw;
-}
+text-align: center;}
 
 .section-2 .description h2 {
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: calc(24px * (1440px / 100vh));
 line-height: 20px;
 
 }
@@ -164,7 +153,7 @@ line-height: 20px;
     font-family: 'Merriweather';
 font-style: italic;
 font-weight: 700;
-font-size: 18px;
+font-size: calc(18px * 1440px / 100vh);
 line-height: 20px;
 }
 
@@ -181,18 +170,41 @@ line-height: 20px;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: white;
-text-decoration: none;
+color: #336EC8;
 }
 
-.section-2 .description .ev-download-link-2::after {
-    display: block;
-    background: blue;
-    content: '';
-    height: 5px;
-    width: 16rem;
-}
+
 
 .section-2 .description :not(:nth-last-child(1)) {
     padding-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+    main .right {
+       display: none;
+    }
+   
+    main .left h4 {
+       font-size: 4vw;
+    }
+   
+    .section-2 img {
+       display: none;
+    }
+   
+    .section-2 {
+       display: static;
+       margin: 0;
+       padding: 0;
+    }
+
+    .section-2 .description {
+        position: absolute;
+        margin: none;
+        min-width: 70vw;
+        left: -50vw;
+        min-height: 80vh;
+
+        
+    }
+   }
