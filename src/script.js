@@ -8,5 +8,15 @@ $(document).ready(
                 $(this).removeClass('on').addClass('off');
             }
         );
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            $(".interior-of-car").css({
+              "transform": "scale(" + (1 + scroll/5000) + ")"
+            })
+        
+          })
+
+        $('.hidden-text').fadeIn(500);
     }
 )

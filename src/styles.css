@@ -109,3 +109,7 @@ main .right {
     display: none;
  }
 }
+
+.hidden-text {
+    display:none;
+}
