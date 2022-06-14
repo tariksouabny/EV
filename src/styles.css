@@ -84,6 +84,7 @@ font-style: italic;
 font-weight: 400;
 font-size: 30px;
 line-height: 37px;
+overflow: scroll;
 }
 
 .left > * {
@@ -108,8 +109,17 @@ main .right {
  main .right {
     display: none;
  }
+
+ 
 }
 
 .hidden-text {
     display:none;
+}
+
+.section-2 {
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: url("./media/track_background.png") no-repeat center;
+    background-size: cover;
 }
