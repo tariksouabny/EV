@@ -179,6 +179,23 @@ color: #336EC8;
     padding-bottom: 2rem;
 }
 
+.credits {
+    display: flex;
+    min-height: 10vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #3125a4, #6f22a4);
+    border-top: 10px solid #336EC8
+}
+
+.credits * {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    margin: auto 3rem;
+}
+
 @media (max-width: 768px) {
     main .right {
        display: none;
@@ -193,9 +210,11 @@ color: #336EC8;
     }
    
     .section-2 {
-       display: static;
+       position: static;
+       display: flex;
        margin: 0;
        padding: 0;
+       text-align: center;
     }
 
     .section-2 .description {
@@ -208,3 +227,4 @@ color: #336EC8;
         
     }
    }
+

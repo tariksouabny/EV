@@ -20,18 +20,15 @@ $(document).ready(
             })
         
           })
+        
+          $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            $(".section-2 .description").css({
+              "transform": "scale(" + min(1 + scroll/5000, 1.045) + ")"
+            })
+        
+          })
 
-        $('.hidden-text').fadeIn(1000);
-
-
-        $("h2").cooltext({
-               sequence:[
-                  {
-                     action:"animation",
-                     animation:["cool111"],
-                     stagger:150
-                  }
-               ]
-            });
+        $('.hidden-text').fadeIn(1200);
     }
 )
