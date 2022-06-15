@@ -100,6 +100,19 @@ main .right {
     align-items: center;
 }
 
+.leon-credit {
+    position: relative;
+    top: 5vh;
+    right: 5vw;
+
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+
+color: #FFFFFF;
+}
 
 .interior-of-car{
     filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(30px -30px 0px #336EC8);
@@ -225,6 +238,9 @@ color: #336EC8;
         min-height: 80vh;
 
         
+    }
+    .leon-credit {
+        display: none;
     }
    }
 
