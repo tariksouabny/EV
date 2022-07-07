@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Manrope:wght@200&family=Merriweather:ital,wght@1,700&family=Montserrat:wght@800&family=Old+Standard+TT:ital@1&display=swap');
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex {
+    display: flex;
+}
+main {
+    height: 100vh;
+    flex-direction: row;
+justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    background: url("./media/boston_skyscraper.jpg") no-repeat center;
+    background-size: cover;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+main .left {
+}
+
+
+main h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+main h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 100px;
+}
+
+.ev-download-link-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: transparent;
+    border: 3px solid #336EC8;
+    color: #336EC8;
+    text-transform: uppercase;
+    padding: 1.8rem;
+    border-radius: 100px;
+    text-decoration: none;
+
+}
+
+.ev-download-link-1.off {
+    animation-name: download-1-off;
+    animation-duration: 0.25s;
+}
+.ev-download-link-1.on {
+    animation-name: download-1-on;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes download-1-on {
+    from {
+        background: transparent;
+    }
+    to {
+        background: white;
+    }
+}
+
+@keyframes download-1-off {
+    from {
+        background: white;
+    }
+
+    to {
+        background: transparent;
+    }
+}
+
+
+main .left h4 {
+    width: min(50vw, 700px);
+    font-family: 'Old Standard TT', serif;
+font-style: italic;
+font-weight: 400;
+font-size: 30px;
+line-height: 37px;
+overflow: scroll;
+}
+
+.left > * {
+    margin-bottom: 10vh;
+}
+.left > *:not(.header-text) {
+    margin-top: 10vh;
+}
+
+main .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leon-credit {
+    position: relative;
+    top: 5vh;
+    right: 5vw;
+
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+
+color: #FFFFFF;
+}
+
+.interior-of-car{
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(30px -30px 0px #336EC8);
+}
+
+.hidden-text {
+    display:none;
+}
+
+.section-2 {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url("./media/track_background.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-2 .car-charging {
+    max-width: 80vw;
+    max-height: 80vh;
+    margin-left: 8vw;
+    margin-top: 10vh;
+}
+
+.section-2 .description {
+    background: black;
+    color: white;
+    max-width: 30vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+position: absolute;
+margin-left: 62vw;
+margin-top: 20vw;
+
+text-align: center;}
+
+.section-2 .description h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: calc(24px * (1440px / 100vh));
+line-height: 20px;
+
+}
+
+.section-2 .description h3 {
+    font-family: 'Merriweather';
+font-style: italic;
+font-weight: 700;
+font-size: calc(18px * 1440px / 100vh);
+line-height: 20px;
+}
+
+.section-2 .description .ev-download-link-2
+
+{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 20px;
+/* or 125% */
+
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #336EC8;
+}
+
+
+
+.section-2 .description :not(:nth-last-child(1)) {
+    padding-bottom: 2rem;
+}
+
+.credits {
+    display: flex;
+    min-height: 10vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #3125a4, #6f22a4);
+    border-top: 10px solid #336EC8
+}
+
+.credits * {
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    margin: auto 3rem;
+}
+
+@media (max-width: 768px) {
+    main .right {
+       display: none;
+    }
+   
+    main .left h4 {
+       font-size: 4vw;
+    }
+   
+    .section-2 img {
+       display: none;
+    }
+   
+    .section-2 {
+       position: static;
+       display: flex;
+       margin: 0;
+       padding: 0;
+       text-align: center;
+    }
+
+    .section-2 .description {
+        position: absolute;
+        margin: none;
+        min-width: 70vw;
+        left: -50vw;
+        min-height: 80vh;
+
+        
+    }
+    .leon-credit {
+        display: none;
+    }
+   }
+
