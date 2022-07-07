@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vite": "^2.9.13"
+  },
+  "dependencies": {
+    "rollup": "^2.75.7"
   }
 }
